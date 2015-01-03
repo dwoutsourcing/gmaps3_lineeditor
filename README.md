@@ -12,3 +12,11 @@ It simply adds a few but useful capabilities:
 LineEditor is a google.maps.MVCObject. It exposes two bindable properties:
 - enabled (boolean): bound to editable polyline's property.
 - polyline (google.maps.Polyline)
+
+LineEditor constructor:
+new dw.google.maps.LineEditor(polyline, removeCallback);
+Both arguments are optional. 
+
+polyline is a google.maps.Polyline instance
+removeCallback is a callback function to be called before removing a point. This function must return a boolean value (if true, point will be deleted)
+An event (a MouseEvent instance) parameter will be passed to the callback function as the unique argument.
